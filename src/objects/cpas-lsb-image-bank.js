@@ -45,12 +45,4 @@ export default class CPASLsbImageBank extends AbstractCrudObject {
       params
     );
   }
-
-  // $FlowFixMe : Support Generic Types
-  update (fields: Array<string>, params: Object = {}): CPASLsbImageBank {
-    // $FlowFixMe : Support Generic Types
-    return super.update(
-      params
-    );
-  }
 }

@@ -19,6 +19,7 @@ import AppRequestFormerRecipient from './app-request-former-recipient';
 import AppRequest from './app-request';
 import Application from './application';
 import BusinessAssetGroup from './business-asset-group';
+import IGUser from './ig-user';
 import ProductCatalog from './product-catalog';
 import WhatsAppBusinessAccount from './whats-app-business-account';
 import BusinessUser from './business-user';
@@ -109,6 +110,12 @@ export default class User extends AbstractCrudObject {
     return Object.freeze({
       status_off: 'STATUS_OFF',
       status_on: 'STATUS_ON',
+    });
+  }
+  static get AiDisclosure (): Object {
+    return Object.freeze({
+      ai_generated: 'AI_GENERATED',
+      not_ai_generated: 'NOT_AI_GENERATED',
     });
   }
   static get Filtering (): Object {
@@ -259,6 +266,16 @@ export default class User extends AbstractCrudObject {
       params,
       fetchFirstPage,
       '/assigned_business_asset_groups'
+    );
+  }
+
+  getAssignedInstagramAccounts (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
+    return this.getEdge(
+      IGUser,
+      fields,
+      params,
+      fetchFirstPage,
+      '/assigned_instagram_accounts'
     );
   }
 

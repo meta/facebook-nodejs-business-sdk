@@ -20,6 +20,7 @@ export default class TrendingTopicsSpec extends AbstractCrudObject {
     return Object.freeze({
       is_all_trending: 'is_all_trending',
       is_special_budget_alloc: 'is_special_budget_alloc',
+      program_id: 'program_id',
       trending_topics: 'trending_topics',
     });
   }

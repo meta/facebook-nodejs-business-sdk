@@ -13,11 +13,11 @@ import AbstractObject from './../abstract-object';
 import Cursor from './../cursor';
 
 /**
- * IGUserExportForCAM
+ * UserExportForCAM
  * @extends AbstractCrudObject
  * @see {@link https://developers.facebook.com/docs/marketing-api/}
  */
-export default class IGUserExportForCAM extends AbstractCrudObject {
+export default class UserExportForCAM extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
       age_bucket: 'age_bucket',
@@ -26,6 +26,7 @@ export default class IGUserExportForCAM extends AbstractCrudObject {
       category: 'category',
       country: 'country',
       email: 'email',
+      facebook_messaging_id: 'facebook_messaging_id',
       gender: 'gender',
       has_brand_partnership_experience: 'has_brand_partnership_experience',
       id: 'id',
@@ -307,6 +308,34 @@ export default class IGUserExportForCAM extends AbstractCrudObject {
       female: 'female',
       male: 'male',
       unknown: 'unknown',
+    });
+  }
+  static get CreatorLanguage (): Object {
+    return Object.freeze({
+      ar: 'ar',
+      as: 'as',
+      bn: 'bn',
+      de: 'de',
+      en: 'en',
+      es: 'es',
+      fr: 'fr',
+      gu: 'gu',
+      hi: 'hi',
+      id: 'id',
+      ja: 'ja',
+      kn: 'kn',
+      ko: 'ko',
+      ml: 'ml',
+      mr: 'mr',
+      nl: 'nl',
+      or: 'or',
+      pa: 'pa',
+      pt: 'pt',
+      ta: 'ta',
+      te: 'te',
+      tr: 'tr',
+      ur: 'ur',
+      zh: 'zh',
     });
   }
   static get MajorAudienceCountries (): Object {

@@ -11,16 +11,15 @@
 import {AbstractCrudObject} from './../abstract-crud-object';
 
 /**
- * AdAccountAdsGet
+ * ProductFeedUploadErrorSamplesGet
  * @extends AbstractCrudObject
  * @see {@link https://developers.facebook.com/docs/marketing-api/}
  */
-export default class AdAccountAdsGet extends AbstractCrudObject {
+export default class ProductFeedUploadErrorSamplesGet extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
       data: 'data',
       paging: 'paging',
-      summary: 'summary',
     });
   }
 

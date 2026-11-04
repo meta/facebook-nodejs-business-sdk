@@ -14,6 +14,7 @@ import Cursor from './../cursor';
 import Business from './business';
 import AssignedUser from './assigned-user';
 import AutomotiveModel from './automotive-model';
+import ProductItem from './product-item';
 import StoreCatalogSettings from './store-catalog-settings';
 import ProductCatalogCategory from './product-catalog-category';
 import CheckBatchRequestStatus from './check-batch-request-status';
@@ -36,7 +37,6 @@ import ProductFeed from './product-feed';
 import ProductGroup from './product-group';
 import ProductSet from './product-set';
 import ProductCatalogProductSetsBatch from './product-catalog-product-sets-batch';
-import ProductItem from './product-item';
 import VehicleOffer from './vehicle-offer';
 import Vehicle from './vehicle';
 import CatalogContentVersionConfig from './catalog-content-version-config';
@@ -96,6 +96,63 @@ export default class ProductCatalog extends AbstractCrudObject {
       services: 'services',
       transactable_items: 'transactable_items',
       vehicles: 'vehicles',
+    });
+  }
+  static get CheckoutCountry (): Object {
+    return Object.freeze({
+      ar: 'AR',
+      at: 'AT',
+      au: 'AU',
+      be: 'BE',
+      bg: 'BG',
+      br: 'BR',
+      ca: 'CA',
+      ch: 'CH',
+      cl: 'CL',
+      co: 'CO',
+      cy: 'CY',
+      cz: 'CZ',
+      de: 'DE',
+      dk: 'DK',
+      ec: 'EC',
+      ee: 'EE',
+      es: 'ES',
+      fi: 'FI',
+      fr: 'FR',
+      gb: 'GB',
+      gr: 'GR',
+      hk: 'HK',
+      hr: 'HR',
+      hu: 'HU',
+      ie: 'IE',
+      in: 'IN',
+      it: 'IT',
+      jp: 'JP',
+      kr: 'KR',
+      lt: 'LT',
+      lu: 'LU',
+      lv: 'LV',
+      mt: 'MT',
+      mx: 'MX',
+      nl: 'NL',
+      no: 'NO',
+      pe: 'PE',
+      ph: 'PH',
+      pk: 'PK',
+      pl: 'PL',
+      pr: 'PR',
+      pt: 'PT',
+      ro: 'RO',
+      se: 'SE',
+      sg: 'SG',
+      si: 'SI',
+      sk: 'SK',
+      th: 'TH',
+      tr: 'TR',
+      tw: 'TW',
+      us: 'US',
+      uy: 'UY',
+      vn: 'VN',
     });
   }
   static get EnabledCollabTerms (): Object {
@@ -242,12 +299,12 @@ export default class ProductCatalog extends AbstractCrudObject {
     );
   }
 
-  createBatch (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<ProductCatalog> {
+  createBatch (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<ProductItem> {
     return this.createEdge(
       '/batch',
       fields,
       params,
-      ProductCatalog,
+      ProductItem,
       pathOverride,
     );
   }
@@ -329,16 +386,6 @@ export default class ProductCatalog extends AbstractCrudObject {
       params,
       fetchFirstPage,
       '/collaborative_ads_share_settings'
-    );
-  }
-
-  createCpasLsbImageBank (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<CPASLsbImageBank> {
-    return this.createEdge(
-      '/cpas_lsb_image_bank',
-      fields,
-      params,
-      CPASLsbImageBank,
-      pathOverride,
     );
   }
 
@@ -545,16 +592,6 @@ export default class ProductCatalog extends AbstractCrudObject {
       fields,
       params,
       ProductCatalog,
-      pathOverride,
-    );
-  }
-
-  createMediaTitle (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
-    return this.createEdge(
-      '/media_titles',
-      fields,
-      params,
-      null,
       pathOverride,
     );
   }

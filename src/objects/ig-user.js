@@ -22,14 +22,17 @@ import ShadowIGUserCollaborationInvites from './shadow-ig-user-collaboration-inv
 import ShadowIGUserCollaborativeMedia from './shadow-ig-user-collaborative-media';
 import ThreadsUser from './threads-user';
 import ContentPublishingLimitResponse from './content-publishing-limit-response';
-import IGUserExportForCAM from './ig-user-export-for-cam';
+import UserExportForCAM from './user-export-for-cam';
 import Dataset from './dataset';
 import InstagramInsightsResult from './instagram-insights-result';
 import IGMedia from './ig-media';
+import IGUserMessengerProfile from './ig-user-messenger-profile';
 import UserPageOneTimeOptInTokenSettings from './user-page-one-time-opt-in-token-settings';
 import IGShoppingProductAppeal from './ig-shopping-product-appeal';
 import ShadowIGHashtag from './shadow-ig-hashtag';
 import ShadowIGScheduledMedia from './shadow-ig-scheduled-media';
+import IGUserSubscribedAppsData from './ig-user-subscribed-apps-data';
+import ShadowIGUserThreadOwner from './shadow-ig-user-thread-owner';
 import IGUpcomingEvent from './ig-upcoming-event';
 import ShadowIGUserCTXPartnerAppWelcomeMessageFlow from './shadow-ig-user-ctx-partner-app-welcome-message-flow';
 
@@ -65,6 +68,27 @@ export default class IGUser extends AbstractCrudObject {
     });
   }
 
+  static get SubscribedFields (): Object {
+    return Object.freeze({
+      comment_poll_response: 'comment_poll_response',
+      comments: 'comments',
+      follow: 'follow',
+      live_comments: 'live_comments',
+      mentions: 'mentions',
+      message_edit: 'message_edit',
+      message_reactions: 'message_reactions',
+      messages: 'messages',
+      messaging_optins: 'messaging_optins',
+      messaging_postbacks: 'messaging_postbacks',
+      messaging_referral: 'messaging_referral',
+      messaging_seen: 'messaging_seen',
+      onboarding_welcome_message_series: 'onboarding_welcome_message_series',
+      share_to_story: 'share_to_story',
+      standby: 'standby',
+      story_insights: 'story_insights',
+      story_poll_response: 'story_poll_response',
+    });
+  }
 
   getAgencies (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
     return this.getEdge(
@@ -233,9 +257,19 @@ export default class IGUser extends AbstractCrudObject {
     );
   }
 
+  getConversations (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
+    return this.getEdge(
+      AbstractObject,
+      fields,
+      params,
+      fetchFirstPage,
+      '/conversations'
+    );
+  }
+
   getCreatorMarketPlaceCreators (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
     return this.getEdge(
-      IGUserExportForCAM,
+      UserExportForCAM,
       fields,
       params,
       fetchFirstPage,
@@ -259,6 +293,16 @@ export default class IGUser extends AbstractCrudObject {
       fields,
       params,
       Dataset,
+      pathOverride,
+    );
+  }
+
+  createExtendThreadControl (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<IGUser> {
+    return this.createEdge(
+      '/extend_thread_control',
+      fields,
+      params,
+      IGUser,
       pathOverride,
     );
   }
@@ -343,6 +387,53 @@ export default class IGUser extends AbstractCrudObject {
     );
   }
 
+  createMessageAttachment (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
+    return this.createEdge(
+      '/message_attachments',
+      fields,
+      params,
+      null,
+      pathOverride,
+    );
+  }
+
+  createMessage (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
+    return this.createEdge(
+      '/messages',
+      fields,
+      params,
+      null,
+      pathOverride,
+    );
+  }
+
+  deleteMessengerProfile (params: Object = {}): Promise<*> {
+    return super.deleteEdge(
+      '/messenger_profile',
+      params
+    );
+  }
+
+  getMessengerProfile (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
+    return this.getEdge(
+      IGUserMessengerProfile,
+      fields,
+      params,
+      fetchFirstPage,
+      '/messenger_profile'
+    );
+  }
+
+  createMessengerProfile (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<IGUserMessengerProfile> {
+    return this.createEdge(
+      '/messenger_profile',
+      fields,
+      params,
+      IGUserMessengerProfile,
+      pathOverride,
+    );
+  }
+
   createModerateConversation (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
     return this.createEdge(
       '/moderate_conversations',
@@ -360,6 +451,16 @@ export default class IGUser extends AbstractCrudObject {
       params,
       fetchFirstPage,
       '/notification_message_tokens'
+    );
+  }
+
+  createPassThreadControl (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
+    return this.createEdge(
+      '/pass_thread_control',
+      fields,
+      params,
+      null,
+      pathOverride,
     );
   }
 
@@ -393,6 +494,26 @@ export default class IGUser extends AbstractCrudObject {
     );
   }
 
+  createReleaseThreadControl (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<IGUser> {
+    return this.createEdge(
+      '/release_thread_control',
+      fields,
+      params,
+      IGUser,
+      pathOverride,
+    );
+  }
+
+  createRequestThreadControl (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
+    return this.createEdge(
+      '/request_thread_control',
+      fields,
+      params,
+      null,
+      pathOverride,
+    );
+  }
+
   getScheduledMedia (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
     return this.getEdge(
       ShadowIGScheduledMedia,
@@ -413,6 +534,33 @@ export default class IGUser extends AbstractCrudObject {
     );
   }
 
+  deleteSubscribedApps (params: Object = {}): Promise<*> {
+    return super.deleteEdge(
+      '/subscribed_apps',
+      params
+    );
+  }
+
+  getSubscribedApps (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
+    return this.getEdge(
+      IGUserSubscribedAppsData,
+      fields,
+      params,
+      fetchFirstPage,
+      '/subscribed_apps'
+    );
+  }
+
+  createSubscribedApp (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<IGUser> {
+    return this.createEdge(
+      '/subscribed_apps',
+      fields,
+      params,
+      IGUser,
+      pathOverride,
+    );
+  }
+
   getTags (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
     return this.getEdge(
       IGMedia,
@@ -420,6 +568,26 @@ export default class IGUser extends AbstractCrudObject {
       params,
       fetchFirstPage,
       '/tags'
+    );
+  }
+
+  createTakeThreadControl (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
+    return this.createEdge(
+      '/take_thread_control',
+      fields,
+      params,
+      null,
+      pathOverride,
+    );
+  }
+
+  getThreadOwner (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
+    return this.getEdge(
+      ShadowIGUserThreadOwner,
+      fields,
+      params,
+      fetchFirstPage,
+      '/thread_owner'
     );
   }
 
@@ -443,6 +611,13 @@ export default class IGUser extends AbstractCrudObject {
     );
   }
 
+  deleteWelcomeMessageFlows (params: Object = {}): Promise<*> {
+    return super.deleteEdge(
+      '/welcome_message_flows',
+      params
+    );
+  }
+
   getWelcomeMessageFlows (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
     return this.getEdge(
       ShadowIGUserCTXPartnerAppWelcomeMessageFlow,
@@ -450,6 +625,16 @@ export default class IGUser extends AbstractCrudObject {
       params,
       fetchFirstPage,
       '/welcome_message_flows'
+    );
+  }
+
+  createWelcomeMessageFlow (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<ShadowIGUserCTXPartnerAppWelcomeMessageFlow> {
+    return this.createEdge(
+      '/welcome_message_flows',
+      fields,
+      params,
+      ShadowIGUserCTXPartnerAppWelcomeMessageFlow,
+      pathOverride,
     );
   }
 

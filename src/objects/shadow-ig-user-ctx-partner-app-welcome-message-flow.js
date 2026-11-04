@@ -29,4 +29,11 @@ export default class ShadowIGUserCTXPartnerAppWelcomeMessageFlow extends Abstrac
     });
   }
 
+  static get EligiblePlatforms (): Object {
+    return Object.freeze({
+      instagram: 'INSTAGRAM',
+      messenger: 'MESSENGER',
+      whatsapp: 'WHATSAPP',
+    });
+  }
 }

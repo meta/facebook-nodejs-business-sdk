@@ -18,6 +18,7 @@ import {AbstractCrudObject} from './../abstract-crud-object';
 export default class ShadowIGUserThreadOwner extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
+      thread_owner: 'thread_owner',
     });
   }
 

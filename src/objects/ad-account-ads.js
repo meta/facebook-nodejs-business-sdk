@@ -9,8 +9,7 @@
  */
 
 import {AbstractCrudObject} from './../abstract-crud-object';
-import Cursor from './../cursor';
-import AdAccountAdsGet from './ad-account-ads-get';
+import AdAccountAdsCreateAd from './ad-account-ads-create-ad';
 
 /**
  * AdAccountAds
@@ -25,13 +24,13 @@ export default class AdAccountAds extends AbstractCrudObject {
   }
 
 
-  genget (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
-    return this.getEdge(
-      AdAccountAdsGet,
+  gencreatead (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AdAccountAdsCreateAd> {
+    return this.createEdge(
+      '/ads',
       fields,
       params,
-      fetchFirstPage,
-      '/ads'
+      AdAccountAdsCreateAd,
+      pathOverride,
     );
   }
 }

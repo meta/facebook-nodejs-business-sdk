@@ -20,6 +20,7 @@ export default class CPASCollaborationRequest extends AbstractCrudObject {
     return Object.freeze({
       ad_account_id: 'ad_account_id',
       ad_account_name: 'ad_account_name',
+      archived_time: 'archived_time',
       brands: 'brands',
       catalog_segment: 'catalog_segment',
       collaborative_ads_share_settings: 'collaborative_ads_share_settings',
@@ -51,6 +52,7 @@ export default class CPASCollaborationRequest extends AbstractCrudObject {
       external: 'EXTERNAL',
       internal: 'INTERNAL',
       self_serve: 'SELF_SERVE',
+      self_serve_ads_manager: 'SELF_SERVE_ADS_MANAGER',
       self_serve_contact_form: 'SELF_SERVE_CONTACT_FORM',
     });
   }

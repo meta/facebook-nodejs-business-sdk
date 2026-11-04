@@ -342,6 +342,8 @@ export default class AdSet extends AbstractCrudObject {
       value_22: '22',
       value_24: '24',
       value_25: '25',
+      value_26: '26',
+      value_27: '27',
     });
   }
   static get TuneForCategory (): Object {

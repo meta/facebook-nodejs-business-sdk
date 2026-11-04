@@ -9,8 +9,7 @@
  */
 
 import {AbstractCrudObject} from './../abstract-crud-object';
-import Cursor from './../cursor';
-import AdsInsightsAdgroupGet from './ads-insights-adgroup-get';
+import AdsInsightsAdgroupPost from './ads-insights-adgroup-post';
 
 /**
  * AdsInsightsAdgroup
@@ -25,13 +24,13 @@ export default class AdsInsightsAdgroup extends AbstractCrudObject {
   }
 
 
-  genget (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
-    return this.getEdge(
-      AdsInsightsAdgroupGet,
+  genpost (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AdsInsightsAdgroupPost> {
+    return this.createEdge(
+      '/insights',
       fields,
       params,
-      fetchFirstPage,
-      '/insights'
+      AdsInsightsAdgroupPost,
+      pathOverride,
     );
   }
 }

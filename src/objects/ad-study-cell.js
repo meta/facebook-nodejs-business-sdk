@@ -25,6 +25,7 @@ export default class AdStudyCell extends AbstractCrudObject {
       ad_entities_count: 'ad_entities_count',
       ad_ids: 'ad_ids',
       control_percentage: 'control_percentage',
+      exclusion_geo: 'exclusion_geo',
       id: 'id',
       name: 'name',
       treatment_percentage: 'treatment_percentage',

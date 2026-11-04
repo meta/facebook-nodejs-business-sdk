@@ -352,11 +352,9 @@ export default class Page extends AbstractCrudObject {
     return Object.freeze({
       advertise: 'ADVERTISE',
       analyze: 'ANALYZE',
-      cashier_role: 'CASHIER_ROLE',
       create_content: 'CREATE_CONTENT',
       global_structure_management: 'GLOBAL_STRUCTURE_MANAGEMENT',
       manage: 'MANAGE',
-      manage_jobs: 'MANAGE_JOBS',
       manage_leads: 'MANAGE_LEADS',
       messaging: 'MESSAGING',
       moderate: 'MODERATE',
@@ -385,11 +383,9 @@ export default class Page extends AbstractCrudObject {
     return Object.freeze({
       advertise: 'ADVERTISE',
       analyze: 'ANALYZE',
-      cashier_role: 'CASHIER_ROLE',
       create_content: 'CREATE_CONTENT',
       global_structure_management: 'GLOBAL_STRUCTURE_MANAGEMENT',
       manage: 'MANAGE',
-      manage_jobs: 'MANAGE_JOBS',
       manage_leads: 'MANAGE_LEADS',
       messaging: 'MESSAGING',
       moderate: 'MODERATE',
@@ -412,61 +408,6 @@ export default class Page extends AbstractCrudObject {
       profile_plus_revenue: 'PROFILE_PLUS_REVENUE',
       read_page_mailboxes: 'READ_PAGE_MAILBOXES',
       view_monetization_insights: 'VIEW_MONETIZATION_INSIGHTS',
-    });
-  }
-  static get BackdatedTimeGranularity (): Object {
-    return Object.freeze({
-      day: 'day',
-      hour: 'hour',
-      min: 'min',
-      month: 'month',
-      none: 'none',
-      year: 'year',
-    });
-  }
-  static get Formatting (): Object {
-    return Object.freeze({
-      markdown: 'MARKDOWN',
-      plaintext: 'PLAINTEXT',
-    });
-  }
-  static get PlaceAttachmentSetting (): Object {
-    return Object.freeze({
-      value_1: '1',
-      value_2: '2',
-    });
-  }
-  static get PostSurfacesBlacklist (): Object {
-    return Object.freeze({
-      value_1: '1',
-      value_2: '2',
-      value_3: '3',
-      value_4: '4',
-      value_5: '5',
-    });
-  }
-  static get PostingToRedspace (): Object {
-    return Object.freeze({
-      disabled: 'disabled',
-      enabled: 'enabled',
-    });
-  }
-  static get TargetSurface (): Object {
-    return Object.freeze({
-      story: 'STORY',
-      timeline: 'TIMELINE',
-    });
-  }
-  static get UnpublishedContentType (): Object {
-    return Object.freeze({
-      ads_post: 'ADS_POST',
-      draft: 'DRAFT',
-      inline_created: 'INLINE_CREATED',
-      published: 'PUBLISHED',
-      publish_pending: 'PUBLISH_PENDING',
-      reviewable_branded_content: 'REVIEWABLE_BRANDED_CONTENT',
-      scheduled: 'SCHEDULED',
-      scheduled_recurring: 'SCHEDULED_RECURRING',
     });
   }
   static get RecommendationAction (): Object {
@@ -528,15 +469,6 @@ export default class Page extends AbstractCrudObject {
     return Object.freeze({
       instagram: 'INSTAGRAM',
       messenger: 'MESSENGER',
-    });
-  }
-  static get Actions (): Object {
-    return Object.freeze({
-      ban_user: 'BAN_USER',
-      block_user: 'BLOCK_USER',
-      move_to_spam: 'MOVE_TO_SPAM',
-      unban_user: 'UNBAN_USER',
-      unblock_user: 'UNBLOCK_USER',
     });
   }
   static get Model (): Object {
@@ -823,12 +755,12 @@ export default class Page extends AbstractCrudObject {
     );
   }
 
-  createBusinessMessagingFeatureStatus (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<Page> {
+  createBusinessMessagingFeatureStatus (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
     return this.createEdge(
       '/business_messaging_feature_status',
       fields,
       params,
-      Page,
+      null,
       pathOverride,
     );
   }
@@ -1110,12 +1042,12 @@ export default class Page extends AbstractCrudObject {
     );
   }
 
-  createFeed (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<Page> {
+  createFeed (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
     return this.createEdge(
       '/feed',
       fields,
       params,
-      Page,
+      null,
       pathOverride,
     );
   }
@@ -1354,12 +1286,12 @@ export default class Page extends AbstractCrudObject {
     );
   }
 
-  createMessengerCallSetting (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<Page> {
+  createMessengerCallSetting (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<MessengerCallSettings> {
     return this.createEdge(
       '/messenger_call_settings',
       fields,
       params,
-      Page,
+      MessengerCallSettings,
       pathOverride,
     );
   }
@@ -1411,12 +1343,12 @@ export default class Page extends AbstractCrudObject {
     );
   }
 
-  createModerateConversation (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<Page> {
+  createModerateConversation (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
     return this.createEdge(
       '/moderate_conversations',
       fields,
       params,
-      Page,
+      null,
       pathOverride,
     );
   }
@@ -1491,12 +1423,12 @@ export default class Page extends AbstractCrudObject {
     );
   }
 
-  createPassThreadControl (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<Page> {
+  createPassThreadControl (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
     return this.createEdge(
       '/pass_thread_control',
       fields,
       params,
-      Page,
+      null,
       pathOverride,
     );
   }
@@ -1611,12 +1543,12 @@ export default class Page extends AbstractCrudObject {
     );
   }
 
-  createReleaseThreadControl (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<Page> {
+  createReleaseThreadControl (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
     return this.createEdge(
       '/release_thread_control',
       fields,
       params,
-      Page,
+      null,
       pathOverride,
     );
   }

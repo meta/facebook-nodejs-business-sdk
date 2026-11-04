@@ -160,11 +160,9 @@ export default class Business extends AbstractCrudObject {
     return Object.freeze({
       advertise: 'ADVERTISE',
       analyze: 'ANALYZE',
-      cashier_role: 'CASHIER_ROLE',
       create_content: 'CREATE_CONTENT',
       global_structure_management: 'GLOBAL_STRUCTURE_MANAGEMENT',
       manage: 'MANAGE',
-      manage_jobs: 'MANAGE_JOBS',
       manage_leads: 'MANAGE_LEADS',
       messaging: 'MESSAGING',
       moderate: 'MODERATE',
@@ -798,11 +796,9 @@ export default class Business extends AbstractCrudObject {
     return Object.freeze({
       advertise: 'ADVERTISE',
       analyze: 'ANALYZE',
-      cashier_role: 'CASHIER_ROLE',
       create_content: 'CREATE_CONTENT',
       global_structure_management: 'GLOBAL_STRUCTURE_MANAGEMENT',
       manage: 'MANAGE',
-      manage_jobs: 'MANAGE_JOBS',
       manage_leads: 'MANAGE_LEADS',
       messaging: 'MESSAGING',
       moderate: 'MODERATE',
@@ -1720,16 +1716,6 @@ export default class Business extends AbstractCrudObject {
       params,
       null,
       pathOverride,
-    );
-  }
-
-  getPassbackAttributionMetadataConfigs (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
-    return this.getEdge(
-      AbstractObject,
-      fields,
-      params,
-      fetchFirstPage,
-      '/passback_attribution_metadata_configs'
     );
   }
 

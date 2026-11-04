@@ -12,6 +12,7 @@ import {AbstractCrudObject} from './../abstract-crud-object';
 import Cursor from './../cursor';
 import AdAccount from './ad-account';
 import BusinessAssetGroup from './business-asset-group';
+import IGUser from './ig-user';
 import Page from './page';
 import ProductCatalog from './product-catalog';
 import WhatsAppBusinessAccount from './whats-app-business-account';
@@ -70,6 +71,16 @@ export default class SystemUser extends AbstractCrudObject {
       params,
       fetchFirstPage,
       '/assigned_business_asset_groups'
+    );
+  }
+
+  getAssignedInstagramAccounts (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
+    return this.getEdge(
+      IGUser,
+      fields,
+      params,
+      fetchFirstPage,
+      '/assigned_instagram_accounts'
     );
   }
 

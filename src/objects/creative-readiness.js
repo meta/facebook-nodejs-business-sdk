@@ -11,16 +11,18 @@
 import {AbstractCrudObject} from './../abstract-crud-object';
 
 /**
- * AdsInsightsAdgroupGet
+ * CreativeReadiness
  * @extends AbstractCrudObject
  * @see {@link https://developers.facebook.com/docs/marketing-api/}
  */
-export default class AdsInsightsAdgroupGet extends AbstractCrudObject {
+export default class CreativeReadiness extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
-      data: 'data',
-      paging: 'paging',
-      summary: 'summary',
+      ad_ids: 'ad_ids',
+      analysis_status: 'analysis_status',
+      asset_type: 'asset_type',
+      checks: 'checks',
+      creative_id: 'creative_id',
     });
   }
 

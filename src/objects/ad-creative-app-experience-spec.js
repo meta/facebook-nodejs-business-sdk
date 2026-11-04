@@ -18,6 +18,8 @@ import {AbstractCrudObject} from './../abstract-crud-object';
 export default class AdCreativeAppExperienceSpec extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
+      ad_extensions: 'ad_extensions',
+      collection: 'collection',
       details_to_ad_layout: 'details_to_ad_layout',
       reveal_details: 'reveal_details',
       show_spotlights: 'show_spotlights',

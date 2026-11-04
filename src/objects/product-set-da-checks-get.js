@@ -107,6 +107,7 @@ export default class ProductSetDAChecksGet extends AbstractCrudObject {
   static get Features (): Object {
     return Object.freeze({
       agentic_checkout: 'AGENTIC_CHECKOUT',
+      agentic_checkout_pre_click: 'AGENTIC_CHECKOUT_PRE_CLICK',
       amazon_buy_with_prime: 'AMAZON_BUY_WITH_PRIME',
       augmented_reality: 'AUGMENTED_REALITY',
       checkout: 'CHECKOUT',

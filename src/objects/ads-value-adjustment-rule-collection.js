@@ -39,6 +39,15 @@ export default class AdsValueAdjustmentRuleCollection extends AbstractCrudObject
       l2_placement: 'L2_PLACEMENT',
     });
   }
+  static get Origin (): Object {
+    return Object.freeze({
+      advantage_audience_guidance_suggested: 'ADVANTAGE_AUDIENCE_GUIDANCE_SUGGESTED',
+      advertiser_created: 'ADVERTISER_CREATED',
+      placement_guidance_suggested: 'PLACEMENT_GUIDANCE_SUGGESTED',
+      placement_personalized_suggested: 'PLACEMENT_PERSONALIZED_SUGGESTED',
+      translated_from_bid_multipliers: 'TRANSLATED_FROM_BID_MULTIPLIERS',
+    });
+  }
   static get ProductType (): Object {
     return Object.freeze({
       audience: 'AUDIENCE',
@@ -56,7 +65,7 @@ export default class AdsValueAdjustmentRuleCollection extends AbstractCrudObject
 
   createDeleteRuleSet (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AdsValueAdjustmentRuleCollection> {
     return this.createEdge(
-      '/delete_rule_set',
+      '/deleteruleset',
       fields,
       params,
       AdsValueAdjustmentRuleCollection,

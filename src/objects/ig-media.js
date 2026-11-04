@@ -50,6 +50,7 @@ export default class IGMedia extends AbstractCrudObject {
       is_shared_to_feed: 'is_shared_to_feed',
       legacy_instagram_media_id: 'legacy_instagram_media_id',
       like_count: 'like_count',
+      live_reactions: 'live_reactions',
       live_status: 'live_status',
       media_audio_type: 'media_audio_type',
       media_product_type: 'media_product_type',

@@ -11,14 +11,14 @@
 import {AbstractCrudObject} from './../abstract-crud-object';
 
 /**
- * AdgroupDelete
+ * CategoryBenchmarkSubcategoriesGet
  * @extends AbstractCrudObject
  * @see {@link https://developers.facebook.com/docs/marketing-api/}
  */
-export default class AdgroupDelete extends AbstractCrudObject {
+export default class CategoryBenchmarkSubcategoriesGet extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
-      success: 'success',
+      data: 'data',
     });
   }
 

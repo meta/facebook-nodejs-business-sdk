@@ -52,6 +52,7 @@ export default class Campaign extends AbstractCrudObject {
       is_direct_send_campaign: 'is_direct_send_campaign',
       is_message_campaign: 'is_message_campaign',
       is_meta_moment_maker_enabled: 'is_meta_moment_maker_enabled',
+      is_pca_unified: 'is_pca_unified',
       is_reels_trending_ads_enabled: 'is_reels_trending_ads_enabled',
       is_skadnetwork_attribution: 'is_skadnetwork_attribution',
       issues_info: 'issues_info',

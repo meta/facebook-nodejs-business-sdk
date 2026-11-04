@@ -9,8 +9,7 @@
  */
 
 import {AbstractCrudObject} from './../abstract-crud-object';
-import Cursor from './../cursor';
-import AdsInsightsCampaignGet from './ads-insights-campaign-get';
+import AdsInsightsCampaignPost from './ads-insights-campaign-post';
 
 /**
  * AdsInsightsCampaign
@@ -25,13 +24,13 @@ export default class AdsInsightsCampaign extends AbstractCrudObject {
   }
 
 
-  genget (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
-    return this.getEdge(
-      AdsInsightsCampaignGet,
+  genpost (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AdsInsightsCampaignPost> {
+    return this.createEdge(
+      '/insights',
       fields,
       params,
-      fetchFirstPage,
-      '/insights'
+      AdsInsightsCampaignPost,
+      pathOverride,
     );
   }
 }

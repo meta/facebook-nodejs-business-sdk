@@ -9,23 +9,25 @@
  */
 
 import {AbstractCrudObject} from './../abstract-crud-object';
+import AdsInsightsReportRunDelete from './ads-insights-report-run-delete';
 
 /**
- * ProductGroupGet
+ * AdsInsightsReportRun
  * @extends AbstractCrudObject
  * @see {@link https://developers.facebook.com/docs/marketing-api/}
  */
-export default class ProductGroupGet extends AbstractCrudObject {
+export default class AdsInsightsReportRun extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
       id: 'id',
-      mini_shops_product_sets_count: 'mini_shops_product_sets_count',
-      product_catalog: 'product_catalog',
-      products: 'products',
-      representative_item_id: 'representative_item_id',
-      retailer_id: 'retailer_id',
-      variants: 'variants',
     });
   }
 
+
+  gendelete (params: Object = {}): Promise<*> {
+    return super.deleteEdge(
+      '/',
+      params
+    );
+  }
 }

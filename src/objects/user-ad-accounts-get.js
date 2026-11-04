@@ -18,6 +18,9 @@ import {AbstractCrudObject} from './../abstract-crud-object';
 export default class UserAdAccountsGet extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
+      data: 'data',
+      paging: 'paging',
+      summary: 'summary',
     });
   }
 

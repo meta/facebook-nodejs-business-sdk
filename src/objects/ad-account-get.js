@@ -258,6 +258,7 @@ export default class AdAccountGet extends AbstractCrudObject {
       segment: 'segment',
       send_bill_to_address: 'send_bill_to_address',
       send_bill_to_addresses: 'send_bill_to_addresses',
+      show_checkout_experience: 'show_checkout_experience',
       show_improved_boleto: 'show_improved_boleto',
       show_sac_campaign_group_input: 'show_sac_campaign_group_input',
       site_links_live_crawl: 'site_links_live_crawl',

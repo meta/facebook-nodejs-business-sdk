@@ -49,6 +49,7 @@ export default class WhatsAppBusinessAccount extends AbstractCrudObject {
       primary_business_location: 'primary_business_location',
       primary_funding_id: 'primary_funding_id',
       purchase_order_number: 'purchase_order_number',
+      service_pricing_policy: 'service_pricing_policy',
       status: 'status',
       template_auto_archival_enabled: 'template_auto_archival_enabled',
       timezone_id: 'timezone_id',
@@ -124,6 +125,13 @@ export default class WhatsAppBusinessAccount extends AbstractCrudObject {
     return Object.freeze({
       named: 'NAMED',
       positional: 'POSITIONAL',
+    });
+  }
+  static get RoutingEntrypoint (): Object {
+    return Object.freeze({
+      marketing_entrypoint: 'MARKETING_ENTRYPOINT',
+      service_entrypoint: 'SERVICE_ENTRYPOINT',
+      utility_entrypoint: 'UTILITY_ENTRYPOINT',
     });
   }
   static get SendType (): Object {
