@@ -9,28 +9,28 @@
  */
 
 import {AbstractCrudObject} from './../abstract-crud-object';
+import ProductCatalogBatchPost from './product-catalog-batch-post';
 
 /**
- * ExternalMerchantSettings
+ * ProductCatalogBatch
  * @extends AbstractCrudObject
  * @see {@link https://developers.facebook.com/docs/marketing-api/}
  */
-export default class ExternalMerchantSettings extends AbstractCrudObject {
+export default class ProductCatalogBatch extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
-      connect_woo: 'connect_woo',
-      external_platform: 'external_platform',
       id: 'id',
     });
   }
 
 
-  
-  get (fields: Array<string>, params: Object = {}): ExternalMerchantSettings {
-    // $FlowFixMe : Support Generic Types
-    return this.read(
+  genpost (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<ProductCatalogBatchPost> {
+    return this.createEdge(
+      '/batch',
       fields,
-      params
+      params,
+      ProductCatalogBatchPost,
+      pathOverride,
     );
   }
 }

@@ -21,6 +21,7 @@ export default class AdCreativeGet extends AbstractCrudObject {
       account_id: 'account_id',
       actor_id: 'actor_id',
       actor_type: 'actor_type',
+      ad_disclaimer_spec: 'ad_disclaimer_spec',
       adlabels: 'adlabels',
       applink_treatment: 'applink_treatment',
       asset_feed_spec: 'asset_feed_spec',
@@ -59,6 +60,7 @@ export default class AdCreativeGet extends AbstractCrudObject {
       interactive_components_spec: 'interactive_components_spec',
       link_og_id: 'link_og_id',
       link_url: 'link_url',
+      marketing_message_structured_spec: 'marketing_message_structured_spec',
       media_sourcing_spec: 'media_sourcing_spec',
       media_type: 'media_type',
       name: 'name',
@@ -77,10 +79,12 @@ export default class AdCreativeGet extends AbstractCrudObject {
       playable_asset_id: 'playable_asset_id',
       portrait_customizations: 'portrait_customizations',
       product_set_id: 'product_set_id',
+      product_suggestion_settings: 'product_suggestion_settings',
       recommender_settings: 'recommender_settings',
       regional_regulation_disclaimer_spec: 'regional_regulation_disclaimer_spec',
       source_facebook_post_id: 'source_facebook_post_id',
       source_instagram_media_id: 'source_instagram_media_id',
+      source_threads_media_id: 'source_threads_media_id',
       status: 'status',
       template_url: 'template_url',
       template_url_spec: 'template_url_spec',
@@ -94,6 +98,7 @@ export default class AdCreativeGet extends AbstractCrudObject {
       use_page_actor_override: 'use_page_actor_override',
       video_id: 'video_id',
       visual_hash: 'visual_hash',
+      wamo_whatsapp_identity_spec: 'wamo_whatsapp_identity_spec',
     });
   }
 

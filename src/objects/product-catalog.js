@@ -14,7 +14,6 @@ import Cursor from './../cursor';
 import Business from './business';
 import AssignedUser from './assigned-user';
 import AutomotiveModel from './automotive-model';
-import ProductItem from './product-item';
 import StoreCatalogSettings from './store-catalog-settings';
 import ProductCatalogCategory from './product-catalog-category';
 import CheckBatchRequestStatus from './check-batch-request-status';
@@ -37,6 +36,7 @@ import ProductFeed from './product-feed';
 import ProductGroup from './product-group';
 import ProductSet from './product-set';
 import ProductCatalogProductSetsBatch from './product-catalog-product-sets-batch';
+import ProductItem from './product-item';
 import VehicleOffer from './vehicle-offer';
 import Vehicle from './vehicle';
 import CatalogContentVersionConfig from './catalog-content-version-config';
@@ -296,16 +296,6 @@ export default class ProductCatalog extends AbstractCrudObject {
       params,
       fetchFirstPage,
       '/automotive_models'
-    );
-  }
-
-  createBatch (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<ProductItem> {
-    return this.createEdge(
-      '/batch',
-      fields,
-      params,
-      ProductItem,
-      pathOverride,
     );
   }
 

@@ -37,6 +37,7 @@ export default class LeadgenForm extends AbstractCrudObject {
       organic_leads_count: 'organic_leads_count',
       page: 'page',
       page_id: 'page_id',
+      phone_otp_verification_type: 'phone_otp_verification_type',
       privacy_policy_url: 'privacy_policy_url',
       question_page_custom_headline: 'question_page_custom_headline',
       questions: 'questions',
@@ -88,6 +89,13 @@ export default class LeadgenForm extends AbstractCrudObject {
       zh_cn: 'ZH_CN',
       zh_hk: 'ZH_HK',
       zh_tw: 'ZH_TW',
+    });
+  }
+  static get PhoneOtpVerificationType (): Object {
+    return Object.freeze({
+      not_enabled: 'NOT_ENABLED',
+      otp_optional: 'OTP_OPTIONAL',
+      otp_required: 'OTP_REQUIRED',
     });
   }
 

@@ -87,6 +87,8 @@ export { default as AdAccountLiveVideoAdvertiser } from './../src/objects/ad-acc
 export { default as AdAccountMarketingMessagesSettings } from './../src/objects/ad-account-marketing-messages-settings';
 export { default as AdAccountMatchedSearchApplicationsEdgeData } from './../src/objects/ad-account-matched-search-applications-edge-data';
 export { default as AdAccountMaxBid } from './../src/objects/ad-account-max-bid';
+export { default as AdAccountNamingTemplates } from './../src/objects/ad-account-naming-templates';
+export { default as AdAccountNamingTemplatesPost } from './../src/objects/ad-account-naming-templates-post';
 export { default as AdAccountOptimizationGoalsAEMv2Eligibility } from './../src/objects/ad-account-optimization-goals-aemv2-eligibility';
 export { default as AdAccountPaymentDetails } from './../src/objects/ad-account-payment-details';
 export { default as AdAccountPaymentOptions } from './../src/objects/ad-account-payment-options';
@@ -346,7 +348,6 @@ export { default as AdsPixelCapabilityOverride } from './../src/objects/ads-pixe
 export { default as AdsPixelCustomAttributionSource } from './../src/objects/ads-pixel-custom-attribution-source';
 export { default as AdsPixelDAChecks } from './../src/objects/ads-pixel-da-checks';
 export { default as AdsPixelDAChecksGet } from './../src/objects/ads-pixel-da-checks-get';
-export { default as AdsPixelDeliveryRecommendations } from './../src/objects/ads-pixel-delivery-recommendations';
 export { default as AdsPixelDomainControlRule } from './../src/objects/ads-pixel-domain-control-rule';
 export { default as AdsPixelDomainLastFiredTime } from './../src/objects/ads-pixel-domain-last-fired-time';
 export { default as AdsPixelEventLastFiredTime } from './../src/objects/ads-pixel-event-last-fired-time';
@@ -406,6 +407,10 @@ export { default as ApplicationDAChecksGet } from './../src/objects/application-
 export { default as ArAdsDataContainer } from './../src/objects/ar-ads-data-container';
 export { default as ArticlesAndPublicationsItem } from './../src/objects/articles-and-publications-item';
 export { default as ArticlesAndPublicationsItemDelete } from './../src/objects/articles-and-publications-item-delete';
+export { default as AssignedAdAccounts } from './../src/objects/assigned-ad-accounts';
+export { default as AssignedAdAccountsGet } from './../src/objects/assigned-ad-accounts-get';
+export { default as AssignedProductCatalogs } from './../src/objects/assigned-product-catalogs';
+export { default as AssignedProductCatalogsGet } from './../src/objects/assigned-product-catalogs-get';
 export { default as AssignedUser } from './../src/objects/assigned-user';
 export { default as AsyncRequest } from './../src/objects/async-request';
 export { default as AttributionSpec } from './../src/objects/attribution-spec';
@@ -449,6 +454,10 @@ export { default as BusinessAgreement } from './../src/objects/business-agreemen
 export { default as BusinessApplicationRequest } from './../src/objects/business-application-request';
 export { default as BusinessAssetGroup } from './../src/objects/business-asset-group';
 export { default as BusinessAssetSharingAgreement } from './../src/objects/business-asset-sharing-agreement';
+export { default as BusinessCatalogAdvertiserInsights } from './../src/objects/business-catalog-advertiser-insights';
+export { default as BusinessCatalogAdvertiserInsightsGet } from './../src/objects/business-catalog-advertiser-insights-get';
+export { default as BusinessClientProductCatalogs } from './../src/objects/business-client-product-catalogs';
+export { default as BusinessClientProductCatalogsGet } from './../src/objects/business-client-product-catalogs-get';
 export { default as BusinessCreative } from './../src/objects/business-creative';
 export { default as BusinessCreativeFolder } from './../src/objects/business-creative-folder';
 export { default as BusinessCreativeInsights } from './../src/objects/business-creative-insights';
@@ -460,6 +469,8 @@ export { default as BusinessMediaAdPlacementValidationResult } from './../src/ob
 export { default as BusinessObject } from './../src/objects/business-object';
 export { default as BusinessObjectTransferOwnershipAgreement } from './../src/objects/business-object-transfer-ownership-agreement';
 export { default as BusinessOwnedObjectOnBehalfOfRequest } from './../src/objects/business-owned-object-on-behalf-of-request';
+export { default as BusinessOwnedProductCatalogs } from './../src/objects/business-owned-product-catalogs';
+export { default as BusinessOwnedProductCatalogsPost } from './../src/objects/business-owned-product-catalogs-post';
 export { default as BusinessPageRequest } from './../src/objects/business-page-request';
 export { default as BusinessPartnerPremiumOptions } from './../src/objects/business-partner-premium-options';
 export { default as BusinessProductCatalogTOS } from './../src/objects/business-product-catalog-tos';
@@ -633,7 +644,6 @@ export { default as ExtendedCreditInvoiceGroup } from './../src/objects/extended
 export { default as ExternalEventSource } from './../src/objects/external-event-source';
 export { default as ExternalEventSourceCPASEventsDebugging } from './../src/objects/external-event-source-cpas-events-debugging';
 export { default as ExternalEventSourceCPASEventsDebuggingInfo } from './../src/objects/external-event-source-cpas-events-debugging-info';
-export { default as ExternalMerchantSettings } from './../src/objects/external-merchant-settings';
 export { default as FAMEKumo } from './../src/objects/fame-kumo';
 export { default as FBImageCopyrightMatch } from './../src/objects/fb-image-copyright-match';
 export { default as FBPageAndInstagramAccount } from './../src/objects/fb-page-and-instagram-account';
@@ -826,6 +836,8 @@ export { default as PagePartnerWithLeadsAccess } from './../src/objects/page-par
 export { default as PagePaymentOptions } from './../src/objects/page-payment-options';
 export { default as PagePost } from './../src/objects/page-post';
 export { default as PagePostExperiment } from './../src/objects/page-post-experiment';
+export { default as PageProductCatalogs } from './../src/objects/page-product-catalogs';
+export { default as PageProductCatalogsGet } from './../src/objects/page-product-catalogs-get';
 export { default as PagePublisher } from './../src/objects/page-publisher';
 export { default as PageRecommendedPostsInfo } from './../src/objects/page-recommended-posts-info';
 export { default as PageRestaurantServices } from './../src/objects/page-restaurant-services';
@@ -874,6 +886,8 @@ export { default as ProductCatalogActivities } from './../src/objects/product-ca
 export { default as ProductCatalogActivitiesItem } from './../src/objects/product-catalog-activities-item';
 export { default as ProductCatalogActivitiesItemDelete } from './../src/objects/product-catalog-activities-item-delete';
 export { default as ProductCatalogActivitiesPost } from './../src/objects/product-catalog-activities-post';
+export { default as ProductCatalogAgencies } from './../src/objects/product-catalog-agencies';
+export { default as ProductCatalogAgenciesPost } from './../src/objects/product-catalog-agencies-post';
 export { default as ProductCatalogAppsAndSoftware } from './../src/objects/product-catalog-apps-and-software';
 export { default as ProductCatalogAppsAndSoftwareItem } from './../src/objects/product-catalog-apps-and-software-item';
 export { default as ProductCatalogAppsAndSoftwareItemDelete } from './../src/objects/product-catalog-apps-and-software-item-delete';
@@ -884,14 +898,19 @@ export { default as ProductCatalogAssignedUsers } from './../src/objects/product
 export { default as ProductCatalogAssignedUsersPost } from './../src/objects/product-catalog-assigned-users-post';
 export { default as ProductCatalogAutomotiveItem } from './../src/objects/product-catalog-automotive-item';
 export { default as ProductCatalogAutomotiveItemGet } from './../src/objects/product-catalog-automotive-item-get';
+export { default as ProductCatalogBatch } from './../src/objects/product-catalog-batch';
+export { default as ProductCatalogBatchPost } from './../src/objects/product-catalog-batch-post';
 export { default as ProductCatalogCategory } from './../src/objects/product-catalog-category';
 export { default as ProductCatalogCheckBatchRequestStatus } from './../src/objects/product-catalog-check-batch-request-status';
 export { default as ProductCatalogCheckBatchRequestStatusGet } from './../src/objects/product-catalog-check-batch-request-status-get';
 export { default as ProductCatalogCheckMarketplacePartnerDealsStatus } from './../src/objects/product-catalog-check-marketplace-partner-deals-status';
 export { default as ProductCatalogCheckMarketplacePartnerSellersStatus } from './../src/objects/product-catalog-check-marketplace-partner-sellers-status';
 export { default as ProductCatalogDataSource } from './../src/objects/product-catalog-data-source';
+export { default as ProductCatalogDataSourcePriorities } from './../src/objects/product-catalog-data-source-priorities';
+export { default as ProductCatalogDataSourcePrioritiesGet } from './../src/objects/product-catalog-data-source-priorities-get';
 export { default as ProductCatalogDataSources } from './../src/objects/product-catalog-data-sources';
 export { default as ProductCatalogDataSourcesGet } from './../src/objects/product-catalog-data-sources-get';
+export { default as ProductCatalogDelete } from './../src/objects/product-catalog-delete';
 export { default as ProductCatalogDiagnosticGroup } from './../src/objects/product-catalog-diagnostic-group';
 export { default as ProductCatalogDiagnostics } from './../src/objects/product-catalog-diagnostics';
 export { default as ProductCatalogDiagnosticsGet } from './../src/objects/product-catalog-diagnostics-get';
@@ -916,7 +935,6 @@ export { default as ProductCatalogMediaTitle } from './../src/objects/product-ca
 export { default as ProductCatalogMediaTitleDelete } from './../src/objects/product-catalog-media-title-delete';
 export { default as ProductCatalogMediaTitles } from './../src/objects/product-catalog-media-titles';
 export { default as ProductCatalogMediaTitlesPost } from './../src/objects/product-catalog-media-titles-post';
-export { default as ProductCatalogPost } from './../src/objects/product-catalog-post';
 export { default as ProductCatalogPricingVariablesBatch } from './../src/objects/product-catalog-pricing-variables-batch';
 export { default as ProductCatalogProductFeeds } from './../src/objects/product-catalog-product-feeds';
 export { default as ProductCatalogProductFeedsPost } from './../src/objects/product-catalog-product-feeds-post';
@@ -1069,6 +1087,8 @@ export { default as ShadowIGUserCollaborationInvites } from './../src/objects/sh
 export { default as ShadowIGUserCollaborativeMedia } from './../src/objects/shadow-ig-user-collaborative-media';
 export { default as ShadowIGUserPartnershipAdsMediaErrors } from './../src/objects/shadow-ig-user-partnership-ads-media-errors';
 export { default as ShadowIGUserThreadOwner } from './../src/objects/shadow-ig-user-thread-owner';
+export { default as ShareOfVoice } from './../src/objects/share-of-voice';
+export { default as ShareOfVoiceGet } from './../src/objects/share-of-voice-get';
 export { default as Shop } from './../src/objects/shop';
 export { default as SignalsIWLExtractor } from './../src/objects/signals-iwl-extractor';
 export { default as SingleOwnerAdditionalProfile } from './../src/objects/single-owner-additional-profile';
@@ -1140,6 +1160,8 @@ export { default as UserPageOneTimeOptInTokenSettings } from './../src/objects/u
 export { default as UserPaymentMethodsInfo } from './../src/objects/user-payment-methods-info';
 export { default as UserPaymentMobilePricepoints } from './../src/objects/user-payment-mobile-pricepoints';
 export { default as UserPaymentModulesOptions } from './../src/objects/user-payment-modules-options';
+export { default as UserProductCatalogs } from './../src/objects/user-product-catalogs';
+export { default as UserProductCatalogsGet } from './../src/objects/user-product-catalogs-get';
 export { default as ValueBasedEligibleSource } from './../src/objects/value-based-eligible-source';
 export { default as ValueRulesSpec } from './../src/objects/value-rules-spec';
 export { default as Vehicle } from './../src/objects/vehicle';
@@ -1177,7 +1199,6 @@ export { default as WhatsAppBusinessHealthStatusForMessageSend } from './../src/
 export { default as WhatsAppBusinessPartnerClientVerificationSubmission } from './../src/objects/whats-app-business-partner-client-verification-submission';
 export { default as WhatsAppBusinessPreVerifiedPhoneNumber } from './../src/objects/whats-app-business-pre-verified-phone-number';
 export { default as WhatsAppBusinessProfile } from './../src/objects/whats-app-business-profile';
-export { default as WhatsAppPaymentCapabilities } from './../src/objects/whats-app-payment-capabilities';
 export { default as WhatsappSubscribedAppsInfo } from './../src/objects/whatsapp-subscribed-apps-info';
 export { default as WhitehatFBDLRun } from './../src/objects/whitehat-fbdl-run';
 export { default as WifiInformation } from './../src/objects/wifi-information';
@@ -1188,6 +1209,5 @@ export { default as WoodhengePurchasedPAYGReceipt } from './../src/objects/woodh
 export { default as WoodhengeSupporter } from './../src/objects/woodhenge-supporter';
 export { default as WorkAccessCode } from './../src/objects/work-access-code';
 export { default as WorkExperience } from './../src/objects/work-experience';
-export { default as WorkSkill } from './../src/objects/work-skill';
 export { default as WorkUserBadges } from './../src/objects/work-user-badges';
 export { default as WorkUserFrontline } from './../src/objects/work-user-frontline';

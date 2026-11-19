@@ -88,7 +88,6 @@ export default class AdSet extends AbstractCrudObject {
       live_video_ad_campaign_config: 'live_video_ad_campaign_config',
       low_creative_reach: 'low_creative_reach',
       max_budget_spend_percentage: 'max_budget_spend_percentage',
-      meta_moment_maker_spec: 'meta_moment_maker_spec',
       min_budget_spend_percentage: 'min_budget_spend_percentage',
       multi_event_conversion_attribution_window_seconds: 'multi_event_conversion_attribution_window_seconds',
       multi_optimization_goal_weight: 'multi_optimization_goal_weight',

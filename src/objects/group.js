@@ -97,39 +97,6 @@ export default class Group extends AbstractCrudObject {
       work_teamwork: 'WORK_TEAMWORK',
     });
   }
-  static get GroupType (): Object {
-    return Object.freeze({
-      casual: 'CASUAL',
-      coworkers: 'COWORKERS',
-      custom: 'CUSTOM',
-      for_sale: 'FOR_SALE',
-      for_work: 'FOR_WORK',
-      game: 'GAME',
-      health_support: 'HEALTH_SUPPORT',
-      jobs: 'JOBS',
-      learning: 'LEARNING',
-      none: 'NONE',
-      parenting: 'PARENTING',
-      streamer: 'STREAMER',
-      work_agent_to_agent: 'WORK_AGENT_TO_AGENT',
-      work_announcement: 'WORK_ANNOUNCEMENT',
-      work_demo_group: 'WORK_DEMO_GROUP',
-      work_discussion: 'WORK_DISCUSSION',
-      work_ephemeral: 'WORK_EPHEMERAL',
-      work_feedback: 'WORK_FEEDBACK',
-      work_for_sale: 'WORK_FOR_SALE',
-      work_garden: 'WORK_GARDEN',
-      work_integrity: 'WORK_INTEGRITY',
-      work_learning: 'WORK_LEARNING',
-      work_mentorship: 'WORK_MENTORSHIP',
-      work_multi_company: 'WORK_MULTI_COMPANY',
-      work_recruiting: 'WORK_RECRUITING',
-      work_social: 'WORK_SOCIAL',
-      work_stages: 'WORK_STAGES',
-      work_team: 'WORK_TEAM',
-      work_teamwork: 'WORK_TEAMWORK',
-    });
-  }
 
   deleteAdmins (params: Object = {}): Promise<*> {
     return super.deleteEdge(
@@ -215,16 +182,6 @@ export default class Group extends AbstractCrudObject {
       params,
       fetchFirstPage,
       '/groups'
-    );
-  }
-
-  createGroup (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<Group> {
-    return this.createEdge(
-      '/groups',
-      fields,
-      params,
-      Group,
-      pathOverride,
     );
   }
 

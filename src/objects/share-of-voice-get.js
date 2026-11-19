@@ -11,15 +11,14 @@
 import {AbstractCrudObject} from './../abstract-crud-object';
 
 /**
- * ProductCatalogPost
+ * ShareOfVoiceGet
  * @extends AbstractCrudObject
  * @see {@link https://developers.facebook.com/docs/marketing-api/}
  */
-export default class ProductCatalogPost extends AbstractCrudObject {
+export default class ShareOfVoiceGet extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
-      __firstOneOf: '__firstOneOf',
-      __secondOneOf: '__secondOneOf',
+      data: 'data',
     });
   }
 

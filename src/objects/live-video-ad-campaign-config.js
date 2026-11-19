@@ -18,7 +18,9 @@ import {AbstractCrudObject} from './../abstract-crud-object';
 export default class LiveVideoAdCampaignConfig extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
+      declared_live_seconds: 'declared_live_seconds',
       id: 'id',
+      live_cadence: 'live_cadence',
       live_video_ad_type: 'live_video_ad_type',
     });
   }

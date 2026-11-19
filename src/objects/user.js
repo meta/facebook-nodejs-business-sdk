@@ -112,12 +112,6 @@ export default class User extends AbstractCrudObject {
       status_on: 'STATUS_ON',
     });
   }
-  static get AiDisclosure (): Object {
-    return Object.freeze({
-      ai_generated: 'AI_GENERATED',
-      not_ai_generated: 'NOT_AI_GENERATED',
-    });
-  }
   static get Filtering (): Object {
     return Object.freeze({
       ema: 'ema',
@@ -486,12 +480,12 @@ export default class User extends AbstractCrudObject {
     );
   }
 
-  createLiveVideo (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<LiveVideo> {
+  createLiveVideo (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
     return this.createEdge(
       '/live_videos',
       fields,
       params,
-      LiveVideo,
+      null,
       pathOverride,
     );
   }

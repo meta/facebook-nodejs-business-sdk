@@ -9,18 +9,29 @@
  */
 
 import {AbstractCrudObject} from './../abstract-crud-object';
+import Cursor from './../cursor';
+import UserProductCatalogsGet from './user-product-catalogs-get';
 
 /**
- * AdsPixelDeliveryRecommendations
+ * UserProductCatalogs
  * @extends AbstractCrudObject
  * @see {@link https://developers.facebook.com/docs/marketing-api/}
  */
-export default class AdsPixelDeliveryRecommendations extends AbstractCrudObject {
+export default class UserProductCatalogs extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
-      custom_event_type: 'custom_event_type',
-      optimization_goal: 'optimization_goal',
+      id: 'id',
     });
   }
 
+
+  genget (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
+    return this.getEdge(
+      UserProductCatalogsGet,
+      fields,
+      params,
+      fetchFirstPage,
+      '/product_catalogs'
+    );
+  }
 }

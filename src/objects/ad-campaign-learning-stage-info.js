@@ -19,7 +19,6 @@ export default class AdCampaignLearningStageInfo extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
       attribution_windows: 'attribution_windows',
-      cas_segment: 'cas_segment',
       conversions: 'conversions',
       current_budget_prediction: 'current_budget_prediction',
       dynamic_lp_conversions_threshold: 'dynamic_lp_conversions_threshold',

@@ -9,9 +9,9 @@
  */
 
 import {AbstractCrudObject} from './../abstract-crud-object';
+import AbstractObject from './../abstract-object';
 import Cursor from './../cursor';
 import NullNode from './null-node';
-import LiveVideo from './live-video';
 import Profile from './profile';
 import EventTicketTier from './event-ticket-tier';
 
@@ -154,12 +154,12 @@ export default class Event extends AbstractCrudObject {
     );
   }
 
-  createLiveVideo (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<LiveVideo> {
+  createLiveVideo (fields: Array<string>, params: Object = {}, pathOverride?: ?string = null): Promise<AbstractObject> {
     return this.createEdge(
       '/live_videos',
       fields,
       params,
-      LiveVideo,
+      null,
       pathOverride,
     );
   }

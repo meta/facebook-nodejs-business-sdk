@@ -90,6 +90,7 @@ export default class AdCreative extends AbstractCrudObject {
       regional_regulation_disclaimer_spec: 'regional_regulation_disclaimer_spec',
       source_facebook_post_id: 'source_facebook_post_id',
       source_instagram_media_id: 'source_instagram_media_id',
+      source_threads_media_id: 'source_threads_media_id',
       status: 'status',
       template_url: 'template_url',
       template_url_spec: 'template_url_spec',

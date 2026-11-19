@@ -10,38 +10,28 @@
 
 import {AbstractCrudObject} from './../abstract-crud-object';
 import Cursor from './../cursor';
-import User from './user';
+import BusinessClientProductCatalogsGet from './business-client-product-catalogs-get';
 
 /**
- * WorkSkill
+ * BusinessClientProductCatalogs
  * @extends AbstractCrudObject
  * @see {@link https://developers.facebook.com/docs/marketing-api/}
  */
-export default class WorkSkill extends AbstractCrudObject {
+export default class BusinessClientProductCatalogs extends AbstractCrudObject {
   static get Fields (): Object {
     return Object.freeze({
       id: 'id',
-      name: 'name',
     });
   }
 
 
-  getUsers (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
+  genget (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
     return this.getEdge(
-      User,
+      BusinessClientProductCatalogsGet,
       fields,
       params,
       fetchFirstPage,
-      '/users'
-    );
-  }
-
-  
-  get (fields: Array<string>, params: Object = {}): WorkSkill {
-    // $FlowFixMe : Support Generic Types
-    return this.read(
-      fields,
-      params
+      '/client_product_catalogs'
     );
   }
 }
